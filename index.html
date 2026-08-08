@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Replify · 早鸟内测</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b8cff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(900px 480px at 20% -10%, #1b2450 0%, transparent 60%),
+              radial-gradient(800px 420px at 90% 0%, #3b1d5e 0%, transparent 55%),
+              #07070d;
+  color: #f7f8fc; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 20px; text-align: center;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 14px; }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(135deg,#5b8cff,#8b5cf6); box-shadow: 0 0 16px rgba(139,92,246,.9); }
+.badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(139,92,246,.14); color: #c4b5fd; border: 1px solid rgba(139,92,246,.35); padding: 7px 16px; border-radius: 999px; font-size: 13px; margin: 18px 0 10px; }
+.badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px #34d399; }
+h1 { font-size: clamp(30px, 5vw, 46px); letter-spacing: -1.5px; font-weight: 800; }
+.sub { color: #a6adc0; font-size: 16px; margin: 14px auto 34px; max-width: 520px; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 720px; width: 100%; }
+.card { text-decoration: none; color: inherit; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 22px; padding: 32px 28px; transition: transform .25s cubic-bezier(.16,1,.3,1), border-color .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-5px); border-color: rgba(139,92,246,.5); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+.tag { font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: #8b5cf6; margin-bottom: 10px; }
+.card h2 { font-size: 21px; margin-bottom: 10px; letter-spacing: -0.3px; }
+.card p { color: #a6adc0; font-size: 14px; line-height: 1.6; }
+.go { display: inline-block; margin-top: 20px; font-size: 14px; font-weight: 600; color: #fff; background: linear-gradient(135deg,#5b8cff,#8b5cf6); padding: 11px 24px; border-radius: 999px; }
+footer { margin-top: 44px; color: #7e8699; font-size: 12.5px; }
+@media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="brand"><span class="dot"></span>Replify</div>
+  <span class="badge">早鸟内测 · 限量名额</span>
+  <h1>选择你要体验的版本</h1>
+  <p class="sub">Replify 用 AI 帮你打理 X 平台互动 —— 两个版本，两种运营方式，选一个开始体验</p>
+  <div class="cards">
+    <a class="card" href="a/">
+      <div class="tag">A 版 · 半自动</div>
+      <h2>AI 起草你确认</h2>
+      <p>AI 起草回复，你确认后发送。完美继承你的人设，永不自动发帖，安全省时。</p>
+      <span class="go">体验 A 版 →</span>
+    </a>
+    <a class="card" href="b/">
+      <div class="tag">B 版 · 全自动</div>
+      <h2>24 小时自主增长</h2>
+      <p>一键全自动运营：AI 自动盯盘高粉帖并智能回复，规模化获取流量与线索。</p>
+      <span class="go">体验 B 版 →</span>
+    </a>
+  </div>
+  <footer>© 2026 Replify · 早鸟内测进行中</footer>
+</body>
+</html>
