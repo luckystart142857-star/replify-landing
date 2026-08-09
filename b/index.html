@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b8cff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <title>B 版 · X平台全自动AI代理，24小时自主增长</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232997ff'/%3E%3Cstop offset='1' stop-color='%235e5ce6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
@@ -13,7 +13,7 @@
 <body>
 <script>window.B2_TRACK_ENDPOINT = window.B2_TRACK_ENDPOINT || 'https://b2-track.luckystart142857.workers.dev/track';</script>
 
-<!-- 装饰层：极光 + 颗粒 + 滚动进度（纯视觉，不影响可访问性） -->
+<!-- 深空背景：极光 + 颗粒 + 滚动进度 -->
 <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="scroll-progress" aria-hidden="true"></div>
@@ -32,34 +32,38 @@
     <span class="badge">全自动托管 · 内测中</span>
     <h1><span class="line">X 平台全自动 AI 代理，</span><span class="line">24 小时自主增长</span></h1>
     <p class="sub">绑定即用，AI 全自动代理寻找高粉帖并智能回复，实现规模化流量增长</p>
-    <button class="cta-btn" data-cta data-cta-position="hero_main">立即预约全自动内测</button>
+    <div class="cta-row">
+      <button class="cta-btn" data-cta data-cta-position="hero_main">立即预约全自动内测</button>
+    </div>
     <p class="pain">手动回复效率低下，难以 24 小时监控行业热点并抢先发评</p>
 
-    <!-- 产品动图演示：自动盯盘 → 自动发布 -->
-    <div class="demo" role="group" aria-label="产品演示：AI 自动监控并发布回复">
-      <div class="demo-head"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
-      <div class="demo-stage">
-        <div class="st st-0">
-          <div class="monitor-row">
-            <span class="radar" aria-hidden="true"></span>
-            <div class="monitor-text">24/7 自动监控高粉帖…<small>已抢前排</small></div>
+    <!-- 产品演示（Apple 式居中大屏：雷达盯盘） -->
+    <div class="demo-wrap">
+      <div class="demo" role="group" aria-label="产品演示：AI 自动监控并发布回复">
+        <div class="demo-head"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+        <div class="demo-stage">
+          <div class="st st-0">
+            <div class="monitor-row">
+              <span class="radar" aria-hidden="true"></span>
+              <div class="monitor-text">24/7 自动监控高粉帖…<small>已抢前排</small></div>
+            </div>
+          </div>
+          <div class="st st-1">
+            <div class="draft-row"><span class="avatar av-draft"></span><div class="draft-bars"><span class="draft-bar b1"></span><span class="draft-bar b2"></span></div></div>
+            <div class="draft-row"><span class="avatar av-draft" style="background:linear-gradient(135deg,#2997ff,#30d158)"></span><div class="draft-bars"><span class="draft-bar b1" style="width:82%;animation-delay:.14s"></span></div></div>
+          </div>
+          <div class="st st-2">
+            <div class="sent"><span class="ok-ring">✓</span> 已自动发布回复（&lt;60 秒）</div>
+            <div class="confirm-note">全自动代理 · 无需人工介入</div>
           </div>
         </div>
-        <div class="st st-1">
-          <div class="draft-row"><span class="avatar av-draft"></span><div class="draft-bars"><span class="draft-bar b1"></span><span class="draft-bar b2"></span></div></div>
-          <div class="draft-row"><span class="avatar av-draft" style="background:linear-gradient(135deg,#4f8cff,#34d399)"></span><div class="draft-bars"><span class="draft-bar b1" style="width:82%;animation-delay:.14s"></span></div></div>
-        </div>
-        <div class="st st-2">
-          <div class="sent"><span class="ok-ring">✓</span> 已自动发布回复（&lt;60 秒）</div>
-          <div class="confirm-note">全自动代理 · 无需人工介入</div>
-        </div>
+        <p class="demo-note">全自动代理 · 无需人工介入</p>
       </div>
-      <p class="demo-note">全自动代理 · 无需人工介入</p>
     </div>
   </div>
 </section>
 
-<!-- 卖点（Bento 网格） -->
+<!-- 卖点（Apple 式大卡片） -->
 <section>
   <div class="container reveal">
     <div class="sec-head" style="--i:0"><h2>为什么选我们</h2><p>省时 · 规模化 · 24/7 自主增长</p></div>
@@ -73,14 +77,14 @@
           <p>无需干预，AI 代理自动盯盘并快速发布回复，抢占前排黄金流量。</p>
         </div>
       </div>
-      <div class="f-card tall" style="--i:2">
+      <div class="f-card" style="--i:2">
         <div class="f-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
         <h3>规模化自动获取线索</h3>
         <p>全网自动检索目标客群，智能植入软广互动，实现流量到线索转化。</p>
       </div>
-      <div class="f-card tall" style="--i:3">
+      <div class="f-card" style="--i:3">
         <div class="f-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
@@ -151,7 +155,7 @@
       </select>
       <label for="intent">最关心的风控指标</label>
       <textarea id="intent" name="intent" placeholder="如：防封号 / 频控 / 其他"></textarea>
-      <button type="submit" class="cta-btn" style="margin-top:20px;width:100%" data-cta data-cta-position="footer_sub">立即预约全自动内测</button>
+      <button type="submit" class="cta-btn" style="margin-top:24px;width:100%" data-cta data-cta-position="footer_sub">立即预约全自动内测</button>
       <div class="form-ok" id="form-ok">✓ 已提交！我们会尽快联系你（本次为内测预约，未产生费用）。</div>
     </form>
   </div>

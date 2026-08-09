@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b8cff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <title>A 版 · AI起草你确认，完美继承你的人设</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232997ff'/%3E%3Cstop offset='1' stop-color='%235e5ce6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
@@ -13,7 +13,7 @@
 <body>
 <script>window.B2_TRACK_ENDPOINT = window.B2_TRACK_ENDPOINT || 'https://b2-track.luckystart142857.workers.dev/track';</script>
 
-<!-- 装饰层：极光 + 颗粒 + 滚动进度（纯视觉，不影响可访问性） -->
+<!-- 深空背景：极光 + 颗粒 + 滚动进度 -->
 <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="scroll-progress" aria-hidden="true"></div>
@@ -32,37 +32,41 @@
     <span class="badge">早鸟内测 · 限量名额</span>
     <h1><span class="line">AI 起草你确认，</span><span class="line">完美继承你的人设</span></h1>
     <p class="sub">告别自动发帖的垃圾感，像真人般真诚互动，大幅省时并收获高质线索</p>
-    <button class="cta-btn" data-cta data-cta-position="hero_main">获取早鸟内测资格</button>
+    <div class="cta-row">
+      <button class="cta-btn" data-cta data-cta-position="hero_main">获取早鸟内测资格</button>
+    </div>
     <p class="pain">X 平台运营耗时，自动发帖又容易毁人设和被封号</p>
 
-    <!-- 产品动图演示：AI起草 → 人工确认 → 发送 -->
-    <div class="demo" role="group" aria-label="产品演示：AI 起草，你确认后发送">
-      <div class="demo-head"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
-      <div class="demo-stage">
-        <div class="st st-0">
-          <div class="msg-row"><span class="avatar av-in"></span><div class="msg-bubble">收到 1 条新提及</div></div>
+    <!-- 产品演示（Apple 式居中大屏） -->
+    <div class="demo-wrap">
+      <div class="demo" role="group" aria-label="产品演示：AI 起草，你确认后发送">
+        <div class="demo-head"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+        <div class="demo-stage">
+          <div class="st st-0">
+            <div class="msg-row"><span class="avatar av-in"></span><div class="msg-bubble">收到 1 条新提及</div></div>
+          </div>
+          <div class="st st-1">
+            <div class="typing"><i></i><i></i><i></i><span>AI 起草中…</span></div>
+          </div>
+          <div class="st st-2">
+            <div class="draft-row"><span class="avatar av-draft"></span><div class="draft-bars"><span class="draft-bar b1"></span><span class="draft-bar b2"></span></div></div>
+            <div class="draft-tag">草稿：自然 · 像本人</div>
+          </div>
+          <div class="st st-3">
+            <button class="confirm-cta" type="button">✓ 我确认，发送（演示）</button>
+            <div class="confirm-note">仅在你确认后才会发布</div>
+          </div>
+          <div class="st st-4">
+            <div class="sent"><span class="ok-ring">✓</span> 已发送 · 每条回复均由你把关</div>
+          </div>
         </div>
-        <div class="st st-1">
-          <div class="typing"><i></i><i></i><i></i><span>AI 起草中…</span></div>
-        </div>
-        <div class="st st-2">
-          <div class="draft-row"><span class="avatar av-draft"></span><div class="draft-bars"><span class="draft-bar b1"></span><span class="draft-bar b2"></span></div></div>
-          <div class="draft-tag">草稿：自然 · 像本人</div>
-        </div>
-        <div class="st st-3">
-          <button class="confirm-cta" type="button">✓ 我确认，发送（演示）</button>
-          <div class="confirm-note">仅在你确认后才会发布</div>
-        </div>
-        <div class="st st-4">
-          <div class="sent"><span class="ok-ring">✓</span> 已发送 · 每条回复均由你把关</div>
-        </div>
+        <p class="demo-note">每条回复均由你把关，永不自动发帖</p>
       </div>
-      <p class="demo-note">每条回复均由你把关，永不自动发帖</p>
     </div>
   </div>
 </section>
 
-<!-- 卖点（Bento 网格） -->
+<!-- 卖点（Apple 式大卡片） -->
 <section>
   <div class="container reveal">
     <div class="sec-head" style="--i:0"><h2>为什么选我们</h2><p>安全 · 像本人 · 合规可控</p></div>
@@ -76,14 +80,14 @@
           <p>分析你历史发帖与语气，生成宛如你亲自撰写的真诚回复。</p>
         </div>
       </div>
-      <div class="f-card tall" style="--i:2">
+      <div class="f-card" style="--i:2">
         <div class="f-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
         <h3>100% 掌控，永不自动发帖</h3>
         <p>AI 仅在后台起草，每条回复均需你点按确认才可发布。</p>
       </div>
-      <div class="f-card tall" style="--i:3">
+      <div class="f-card" style="--i:3">
         <div class="f-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
@@ -154,7 +158,7 @@
       </select>
       <label for="intent">最想要的功能</label>
       <textarea id="intent" name="intent" placeholder="如：防止封号 / 像本人回复 / 其他"></textarea>
-      <button type="submit" class="cta-btn" style="margin-top:20px;width:100%" data-cta data-cta-position="footer_sub">获取早鸟内测资格</button>
+      <button type="submit" class="cta-btn" style="margin-top:24px;width:100%" data-cta data-cta-position="footer_sub">获取早鸟内测资格</button>
       <div class="form-ok" id="form-ok">✓ 已提交！我们会尽快联系你（本次为内测报名，未产生费用）。</div>
     </form>
   </div>

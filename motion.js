@@ -1,10 +1,11 @@
 /**
- * B2 落地页动效层 (T-B2-3 v8) —— 与 track.js 完全解耦，不触碰埋点
+ * B2 落地页动效层 (T-B2-3 v10) —— 与 track.js 完全解耦，不触碰埋点
  * 功能：
- *   1) 产品演示循环（页面"动图"核心：AI起草→人工确认→发送 / 自动盯盘→自动发布）
+ *   1) 产品演示循环（页面"动图"核心）
  *   2) 滚动进度条
  *   3) 导航滚动态（毛玻璃加深）
- *   4) prefers-reduced-motion 兜底：定格最终态，静止可读
+ *   4) 产品演示视差（滚动时轻微浮起，Apple 式）
+ *   5) prefers-reduced-motion 兜底
  */
 (function () {
   'use strict';
@@ -15,7 +16,6 @@
   if (demo) {
     var variant = (document.documentElement.getAttribute('data-variant') || 'A').toUpperCase();
     if (reduced) {
-      // 动效关闭：定格在"最终态"（A=已发送 / B=已自动发布），静态可读
       demo.classList.add('static');
     } else {
       var seq = variant === 'B'
@@ -33,7 +33,6 @@
         }, seq[idx].d);
       }
       timer = setTimeout(step, seq[0].d);
-      // 页面隐藏时暂停，避免后台空转
       document.addEventListener('visibilitychange', function () {
         if (document.hidden) { if (timer) clearTimeout(timer); }
         else { if (timer) clearTimeout(timer); idx = 0; step(); }
@@ -64,5 +63,24 @@
     function onScroll() { nav.classList.toggle('scrolled', (window.scrollY || 0) > 10); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  }
+
+  // ---- 4) 产品演示视差（Apple 式轻微浮起） ----
+  var demoWrap = document.querySelector('.demo-wrap');
+  if (demoWrap && !reduced) {
+    var ticking2 = false;
+    function parallax() {
+      var r = demoWrap.getBoundingClientRect();
+      var vh = window.innerHeight || 800;
+      // 元素进入视口下半部时，向上轻微浮起（最大 40px）
+      var p = Math.min(Math.max((vh - r.top) / vh, 0), 1);
+      var offset = Math.round((1 - p) * 46);
+      demoWrap.style.transform = 'translateY(' + offset + 'px)';
+      ticking2 = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking2) { ticking2 = true; requestAnimationFrame(parallax); }
+    }, { passive: true });
+    parallax();
   }
 })();
