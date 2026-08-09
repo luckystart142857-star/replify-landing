@@ -83,4 +83,40 @@
     }, { passive: true });
     parallax();
   }
+  // ---- 5) Hero 打字过程动画（循环） ----
+  var typeText = document.querySelector('.type-text');
+  if (typeText && !reduced) {
+    var phrases = (typeText.getAttribute('data-phrases') || '').split(',').filter(Boolean);
+    if (phrases.length) {
+      var pi = 0, ci = 0, deleting = false;
+      function typeTick() {
+        var phrase = phrases[pi];
+        if (!deleting) {
+          ci++;
+          typeText.textContent = phrase.slice(0, ci);
+          if (ci >= phrase.length) { deleting = true; setTimeout(typeTick, 1600); return; }
+          setTimeout(typeTick, 85);
+        } else {
+          ci--;
+          typeText.textContent = phrase.slice(0, ci);
+          if (ci <= 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(typeTick, 350); return; }
+          setTimeout(typeTick, 32);
+        }
+      }
+      setTimeout(typeTick, 500);
+    }
+  }
+
+  // ---- 6) 表单提交过程动画（loading 转圈） ----
+  var leadForm = document.getElementById('lead-form');
+  if (leadForm && !reduced) {
+    leadForm.addEventListener('submit', function () {
+      var btn = leadForm.querySelector('button[type="submit"]');
+      if (!btn || btn.classList.contains('btn-loading')) return;
+      var original = btn.textContent;
+      btn.classList.add('btn-loading');
+      btn.textContent = '提交中…';
+      setTimeout(function () { btn.classList.remove('btn-loading'); btn.textContent = original; }, 2400);
+    });
+  }
 })();

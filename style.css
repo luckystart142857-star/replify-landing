@@ -59,7 +59,7 @@ nav.scrolled { background: rgba(0,0,0,.72); border-bottom-color: var(--line-soft
 .nav-cta:hover { filter: brightness(1.12); transform: translateY(-1px); }
 
 /* ========== Hero（Apple 巨字公式） ========== */
-.hero { text-align: center; padding: 140px 0 60px; position: relative; }
+.hero { text-align: center; padding: 118px 0 48px; position: relative; }
 .badge { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-size: 15px; font-weight: 500; letter-spacing: 0; margin-bottom: 20px; animation: riseIn .9s var(--ease) both; }
 .badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); animation: livePulse 2s ease-in-out infinite; }
 @keyframes livePulse { 0%,100% { box-shadow: 0 0 0 0 rgba(48,209,88,.5); } 50% { box-shadow: 0 0 0 7px rgba(48,209,88,0); } }
@@ -67,7 +67,7 @@ h1 { font-size: clamp(56px, 9vw, 110px); font-weight: 800; letter-spacing: -0.03
 h1 .line { display: block; color: #fff; opacity: 0; transform: translateY(40px); animation: lineReveal 1s var(--ease) forwards; }
 h1 .line + .line { animation-delay: .15s; }
 @keyframes lineReveal { from { opacity: 0; transform: translateY(46px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
-.sub { font-size: clamp(19px, 2.2vw, 26px); font-weight: 400; color: var(--ink-dim); max-width: 620px; margin: 30px auto 44px; letter-spacing: -0.01em; opacity: 0; animation: riseIn 1s var(--ease) .3s forwards; }
+.sub { font-size: clamp(19px, 2.2vw, 26px); font-weight: 400; color: var(--ink-dim); max-width: 620px; margin: 26px auto 34px; letter-spacing: -0.01em; opacity: 0; animation: riseIn 1s var(--ease) .3s forwards; }
 @keyframes riseIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; opacity: 0; animation: riseIn 1s var(--ease) .42s forwards; }
 .cta-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; min-height: 54px; background: var(--accent-2); color: #fff; padding: 0 38px; border-radius: 980px; font-size: 17px; font-weight: 500; border: none; cursor: pointer; text-decoration: none; transition: transform .25s var(--ease), box-shadow .3s, filter .2s; }
@@ -78,7 +78,7 @@ h1 .line + .line { animation-delay: .15s; }
 .pain { color: var(--ink-faint); font-size: 14px; margin-top: 26px; letter-spacing: 0; opacity: 0; animation: riseIn 1s var(--ease) .5s forwards; }
 
 /* ========== 产品演示（Apple 式居中大屏 + 视差） ========== */
-.demo-wrap { max-width: 760px; margin: 90px auto 0; perspective: 1400px; }
+.demo-wrap { max-width: 760px; margin: 66px auto 0; perspective: 1400px; }
 .demo { position: relative; text-align: left; background: linear-gradient(180deg, #101014, #0a0a0e); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 26px 26px 20px; box-shadow: 0 60px 120px rgba(0,0,0,.6); transform: rotateX(0deg) translateZ(0); will-change: transform; }
 .demo-head { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
 .demo-head i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
@@ -118,14 +118,14 @@ h1 .line + .line { animation-delay: .15s; }
 .demo-note { text-align: center; font-size: 13px; color: var(--ink-faint); margin-top: 16px; }
 
 /* ========== 区块 ========== */
-section { padding: 130px 0; }
-.sec-head { text-align: center; margin-bottom: 72px; }
+section { padding: 104px 0; }
+.sec-head { text-align: center; margin-bottom: 56px; }
 .sec-head h2 { font-size: clamp(34px, 4.6vw, 56px); letter-spacing: -0.03em; font-weight: 700; }
 .sec-head p { color: var(--ink-dim); margin-top: 14px; font-size: 18px; font-weight: 400; }
 
 /* ========== 卖点（Apple 式大卡片叙事） ========== */
 .features { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
-.f-card { position: relative; overflow: hidden; grid-column: span 6; background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 44px 40px; transition: transform .35s var(--ease), border-color .35s, box-shadow .35s; }
+.f-card { position: relative; overflow: hidden; grid-column: span 6; background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 38px 36px; transition: transform .35s var(--ease), border-color .35s, box-shadow .35s; }
 .f-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent); opacity: 0; transition: opacity .4s; }
 .f-card:hover { transform: translateY(-6px); border-color: rgba(41,151,255,.4); box-shadow: 0 30px 70px rgba(0,0,0,.5); }
 .f-card:hover::before { opacity: 1; }
@@ -149,14 +149,15 @@ td:first-child, th:first-child { font-weight: 600; color: #f5f5f7; }
 
 /* ========== 定价 ========== */
 .pricing { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
-.price-card { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid var(--line-soft); border-radius: var(--radius-lg); padding: 52px 40px; text-align: center; transition: transform .35s var(--ease), box-shadow .35s, border-color .35s; }
+.price-card { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid var(--line-soft); border-radius: var(--radius-lg); padding: 44px 40px; text-align: center; transition: transform .35s var(--ease), box-shadow .35s, border-color .35s; }
 .price-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(0,0,0,.55); }
 .price-card.recommend { border-color: rgba(41,151,255,.5); }
 .price-card.recommend::before { content: ""; position: absolute; left: 50%; top: 50%; width: 230%; aspect-ratio: 1; transform: translate(-50%,-50%) rotate(0deg); background: conic-gradient(from 0deg, transparent 0 42%, rgba(41,151,255,.85) 52%, rgba(124,92,255,.5) 62%, transparent 72% 100%); animation: rotateSlow 8s linear infinite; pointer-events: none; }
 .price-card.recommend::after { content: ""; position: absolute; inset: 1.5px; border-radius: calc(var(--radius-lg) - 1.5px); background: linear-gradient(180deg, #0d0d12, #0a0a0e); pointer-events: none; }
 .price-card.recommend > * { position: relative; z-index: 1; }
 @keyframes rotateSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
-.price-card .flag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent-2); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 18px; border-radius: 980px; box-shadow: 0 8px 24px rgba(41,151,255,.35); z-index: 2; }
+.price-card .flag { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); background: var(--accent-2); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 18px; border-radius: 980px; box-shadow: 0 8px 24px rgba(41,151,255,.35); z-index: 2; white-space: nowrap; }
+.price-card.recommend { padding-top: 66px; }
 .price-card h3 { font-size: 21px; margin-bottom: 10px; font-weight: 700; }
 .price { font-size: 56px; font-weight: 700; letter-spacing: -0.04em; color: #fff; font-variant-numeric: tabular-nums; }
 .price span { font-size: 16px; color: var(--ink-faint); font-weight: 500; letter-spacing: 0; }
@@ -205,3 +206,15 @@ html { scrollbar-color: rgba(41,151,255,.6) #000; scrollbar-width: thin; }
   .cta-btn::after { display: none; }
   h1 .line { opacity: 1; transform: none; filter: none; }
 }
+/* ========== 过程动画（v10.1） ========== */
+.process-line { display: flex; align-items: center; justify-content: center; gap: 4px; color: var(--ink-faint); font-size: 15px; margin: -6px 0 30px; min-height: 26px; opacity: 0; animation: riseIn 1s var(--ease) .48s forwards; }
+.process-line .type-text { letter-spacing: .01em; }
+.type-caret { width: 2px; height: 18px; background: var(--accent); animation: caretBlink .9s step-end infinite; }
+@keyframes caretBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+.cta-btn.btn-loading { pointer-events: none; opacity: .88; }
+.cta-btn.btn-loading::before { content: ""; width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; margin-right: 10px; animation: btnSpin .8s linear infinite; }
+@keyframes btnSpin { to { transform: rotate(360deg); } }
+
+.f-icon { transition: transform .35s var(--ease); }
+.f-card:hover .f-icon { transform: scale(1.08) rotate(-4deg); }
