@@ -14,8 +14,8 @@
   var lines = document.querySelectorAll('h1 .line');
   if (lines.length) {
     gsap.from(lines, {
-      opacity: 0, y: 46, filter: 'blur(8px)',
-      duration: 1.0, stagger: 0.18, ease: 'expo.out', delay: 0.15
+      opacity: 0, y: 30,
+      duration: 0.9, stagger: 0.16, ease: 'power2.out', delay: 0.1
     });
   }
   gsap.from('.hero .sub', { opacity: 0, y: 26, duration: 0.8, delay: 0.55, ease: 'power2.out' });
@@ -31,7 +31,7 @@
     ).forEach(function (el) { targets.push(el); });
     if (!targets.length) return;
     gsap.from(targets, {
-      opacity: 0, y: 24, duration: 0.6, stagger: 0.08, ease: 'expo.out',
+      opacity: 0, y: 16, duration: 0.6, stagger: 0.08, ease: 'power2.out',
       scrollTrigger: { trigger: wrap, start: 'top 88%', once: true }
     });
   });
@@ -39,7 +39,7 @@
   // ---- 产品演示屏：滚动视差浮起（Apple 式）----
   var demoWrap = document.querySelector('.demo-wrap');
   if (demoWrap) {
-    gsap.fromTo(demoWrap, { y: 70 }, {
+    gsap.fromTo(demoWrap, { y: 44 }, {
       y: 0, ease: 'none',
       scrollTrigger: { trigger: demoWrap, start: 'top bottom', end: 'top 25%', scrub: 0.6 }
     });
