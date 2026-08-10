@@ -15,7 +15,7 @@
   if (lines.length) {
     gsap.from(lines, {
       opacity: 0, y: 30,
-      duration: 0.9, stagger: 0.16, ease: 'power2.out', delay: 0.1
+      duration: 0.9, stagger: 0.16, ease: 'power2.out', delay: 0.1, clearProps: 'transform,opacity'
     });
   }
   gsap.from('.hero .sub', { opacity: 0, y: 26, duration: 0.8, delay: 0.55, ease: 'power2.out' });
@@ -26,12 +26,12 @@
   document.querySelectorAll('.reveal').forEach(function (wrap) {
     var targets = [];
     wrap.querySelectorAll(
-      ':scope > .sec-head, :scope > .features > .f-card, :scope > .features > .trust, ' +
+      ':scope > .sec-head, :scope > .features > .f-card, ' +
       ':scope > .tbl-wrap, :scope > .pricing > .price-card, :scope > form'
     ).forEach(function (el) { targets.push(el); });
     if (!targets.length) return;
     gsap.from(targets, {
-      opacity: 0, y: 16, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+      opacity: 0, y: 8, duration: 0.55, stagger: 0.06, ease: 'power2.out', clearProps: 'transform,opacity',
       scrollTrigger: { trigger: wrap, start: 'top 88%', once: true }
     });
   });

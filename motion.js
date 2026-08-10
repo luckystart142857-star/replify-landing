@@ -24,9 +24,23 @@
       var idx = 0;
       var timer = null;
       demo.classList.add('st0');
+      var progress = demo.querySelector('.demo-progress span');
+      var timeEl = demo.querySelector('.demo-time');
       function step() {
         demo.className = demo.className.replace(/\bst\d\b/g, '').trim();
         demo.classList.add('st' + seq[idx].s);
+        // 视频播放器式：进度条与当前状态同步
+        if (progress) {
+          progress.style.transition = 'none';
+          progress.style.width = '0%';
+          void progress.offsetWidth;
+          progress.style.transition = 'width ' + seq[idx].d + 'ms linear';
+          progress.style.width = '100%';
+        }
+        if (timeEl) {
+          var sec = Math.max(1, Math.round(seq[idx].d / 1000));
+          timeEl.textContent = '0:' + (sec < 10 ? '0' : '') + sec;
+        }
         timer = setTimeout(function () {
           idx = (idx + 1) % seq.length;
           step();

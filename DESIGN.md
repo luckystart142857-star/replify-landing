@@ -1,11 +1,11 @@
-# Replify 落地页 DESIGN.md（v11 重做方向锁定）
+# Replify 落地页 DESIGN.md（v12 参照 apple.com 实测重设计）
 
-> 由 ui-ux-pro-max 定方向（Liquid Glass + AI Personalization Landing）
+> 方向：参照 apple.com 实测（2026-08-10）：白底 + #1D1D1F + 浅灰促销区 #F5F5F7 + SF Pro/PingFang + semibold 600 + 蓝 CTA #06c/#0071e3
 > 由 interface-design 锁定设计系统（本文件为唯一设计事实源，实现不得跑偏）
 > 更新时间：2026-08-10
 
 ## 1. 设计方向（一句话）
-Liquid Glass + Apple 深空黑：流动玻璃质感、深黑底、超大留白、电影级流体动效。
+Apple 官网白底浅色风：白底 #fff、深灰文字 #1d1d1f、浅灰促销区 #f5f5f7 交替、semibold 大标题、蓝 CTA、滚动淡入动效。
 
 ## 2. 设计 Token（禁止自由发挥，必须用这些值）
 ```css

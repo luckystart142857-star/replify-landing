@@ -132,7 +132,7 @@ section { padding: 60px 0; }
 .f-card h3 { font-size: 22px; margin-bottom: 10px; font-weight: 600; color: var(--ink); }
 .f-card.wide h3 { font-size: 27px; }
 .f-card p { color: var(--ink-dim); font-size: 16px; line-height: 1.65; }
-.trust { grid-column: span 12; display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+.trust { grid-column: span 12; display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top: 24px; }
 .trust span { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-dim); font-size: 14px; }
 .trust svg { width: 16px; height: 16px; color: var(--green); }
 
@@ -201,3 +201,18 @@ html { scrollbar-color: #c7c7cc var(--bg-tile); scrollbar-width: thin; }
   .cta-btn::after { display: none; }
   h1 .line { opacity: 1; transform: none; }
 }
+/* ========== v12.1 动态增强 ========== */
+/* hero 流动光晕（浅色 Apple 风，柔和蓝光） */
+.hero { position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; left: 50%; top: -20%; width: 900px; height: 600px; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(0,113,227,.14), transparent 65%); filter: blur(30px); pointer-events: none; animation: heroGlow 9s ease-in-out infinite alternate; z-index: -1; }
+@keyframes heroGlow { from { opacity: .5; transform: translateX(-50%) scale(1); } to { opacity: 1; transform: translateX(-46%) scale(1.15); } }
+
+/* 视频播放器式演示：进度条 + 控件条 */
+.demo-progress { height: 3px; background: var(--line-soft); border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
+.demo-progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), #5e5ce6); border-radius: 3px; }
+.demo-bar { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.demo-play { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; transition: background .2s, transform .2s var(--ease); }
+.demo-play:hover { background: var(--accent-hi); transform: scale(1.06); }
+.demo-time { font-size: 12.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+.demo-live { margin-left: auto; font-size: 12px; color: var(--accent); font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+.demo-live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: livePulse 2s ease-in-out infinite; }
